@@ -1,0 +1,46 @@
+{% extends 'layout/manage.html' %}
+{% block css %}
+    <style>
+        .title_list {
+            min-height: 500px;
+            border-right: 1px solid #dddddd;
+        }
+
+        .content {
+            min-height: 600px;
+            border-left: 1px solid #dddddd;
+            margin-left: -1px;
+        }
+
+        .panel-heading {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }    #这三行样式可以将两个div放在同一行展示
+    </style>
+{% endblock %}
+{% block content %}
+    <div class="container-fluid"><!--在bootstarp中 container-fluid可以将div往中间缩进一点 使页面更加美观 -->
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <div>
+                    <i class="fa fa-book" aria-hidden="true"></i>Wiki文档
+                </div>
+                <div class="function"><!-- btn-xs 可以将按钮变小-->
+                    <a href="{% url 'wiki_add' project_id=request.tracer.project.id %}" type="button"
+                       class="btn btn-success btn-xs"><i class="fa fa-plus-square-o" aria-hidden="true"></i>新建</a>
+                </div>
+            </div>
+            <div class="panel-body" style="padding: 0">
+                <div class="col-sm-3 title_list">目录
+
+                </div>
+                <div class="col-sm-9 content">
+                    <div style="text-align: center;margin-top: 50px">
+                       ssssss
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
